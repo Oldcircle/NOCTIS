@@ -137,8 +137,8 @@ const PROJECTS: Project[] = [
       en: 'Modern React+TS Web App with high-performance local AI engine. No backend required—experience Grandmaster-level gameplay directly in your browser.',
       zh: '基于 React 和 TypeScript 构建的现代化中国象棋 Web 应用。内置高性能 JavaScript 本地博弈引擎，无需后端服务器，在浏览器中即可体验特级大师水准的对弈。'
     },
-    githubUrl: 'https://github.com/eidon-noctis',
-    projectUrl: 'https://xiangqi.example.com'
+    githubUrl: 'https://github.com/Oldcircle/Xiangqi',
+    projectUrl: 'https://oldcircle.github.io/Xiangqi/'
   },
   { 
     id: '2', 
@@ -150,8 +150,8 @@ const PROJECTS: Project[] = [
       en: 'High-octane zombie survival arcade game. Features roguelike elements, intense action, and optimized WebGL rendering.',
       zh: '包含 Roguelike 元素的僵尸生存街机游戏。高强度的动作射击体验，极致的浏览器性能优化。'
     },
-    githubUrl: 'https://github.com/eidon-noctis',
-    projectUrl: 'https://neon.example.com'
+    githubUrl: 'https://github.com/Oldcircle/NeonSurvivor',
+    projectUrl: 'https://oldcircle.github.io/NeonSurvivor/'
   },
   { 
     id: '3', 
@@ -176,8 +176,8 @@ const PROJECTS: Project[] = [
       en: 'Smart color palette generator powered by LLMs. Instantly turns natural language descriptions into professional UI color schemes using Tailwind CSS.',
       zh: '基于大语言模型（LLM）构建的智能调色盘生成与色彩检视工具。利用 React 和 Tailwind CSS 将你的自然语言描述瞬间转化为专业的配色方案。'
     },
-    githubUrl: 'https://github.com/eidon-noctis',
-    projectUrl: 'https://chroma.example.com'
+    githubUrl: 'https://github.com/Oldcircle/ChromaCheckAI',
+    projectUrl: 'https://oldcircle.github.io/ChromaCheckAI/'
   },
   { 
     id: '5', 
@@ -190,7 +190,7 @@ const PROJECTS: Project[] = [
       zh: '喵喵大公无私法庭。一个有趣的 Web 应用程序，旨在帮助情侣、朋友、家人或同事以幽默和温和的方式解决争端。'
     },
     githubUrl: 'https://github.com/eidon-noctis',
-    projectUrl: 'https://meow.example.com'
+    projectUrl: 'www.catcome.online'
   }
 ];
 
