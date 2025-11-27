@@ -60,7 +60,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, language })
       {/* Image Background */}
       <div className="absolute inset-0 overflow-hidden bg-[#001020]">
         <motion.img 
-          src={new URL(project.image, import.meta.env.BASE_URL).toString()} 
+          src={(project.image.startsWith('/') ? import.meta.env.BASE_URL + project.image.slice(1) : project.image)} 
+          onError={(e) => {
+            const url = e.currentTarget.src;
+            const altUrl = url.endsWith('.jpg') ? url.replace(/\.jpg$/, '.png') : url.replace(/\.png$/, '.jpg');
+            if (url !== altUrl) e.currentTarget.src = altUrl;
+          }}
           alt={project.title[language]} 
           className="h-full w-full object-cover transition-all duration-500"
           variants={{
