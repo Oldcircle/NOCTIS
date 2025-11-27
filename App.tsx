@@ -126,13 +126,14 @@ const CONTENT = {
 };
 
 // Portfolio Data
+const BASE_URL = import.meta.env.BASE_URL;
 const PROJECTS: Project[] = [
   { 
     id: '1', 
     title: { en: 'Xiangqi', zh: 'Xiangqi' }, 
     category: { en: 'Game Engine', zh: 'Web 博弈引擎' }, 
     year: '2025', 
-    image: '/images/xiangqi.png',
+    image: BASE_URL + 'images/xiangqi.png',
     description: { 
       en: 'Modern React+TS Web App with high-performance local AI engine. No backend required—experience Grandmaster-level gameplay directly in your browser.',
       zh: '基于 React 和 TypeScript 构建的现代化中国象棋 Web 应用。内置高性能 JavaScript 本地博弈引擎，无需后端服务器，在浏览器中即可体验特级大师水准的对弈。'
@@ -440,8 +441,8 @@ const App: React.FC = () => {
              </div>
 
             {/* 2. Portrait / Identity */}
-            <div className="md:col-span-4 md:row-span-2 h-[300px] md:h-auto bg-black border border-white/10 relative overflow-hidden group">
-               <div className="absolute inset-0 bg-[url('/images/me.jpg')] bg-cover bg-center transition-all duration-500"></div>
+             <div className="md:col-span-4 md:row-span-2 h-[300px] md:h-auto bg-black border border-white/10 relative overflow-hidden group">
+               <div className="absolute inset-0 bg-cover bg-center transition-all duration-500" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/me.jpg)` }}></div>
                 {/* No grayscale overlay */}
                 <div className="absolute inset-0 border border-white/10 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 bg-black px-3 py-1 border border-white/20">
@@ -632,7 +633,7 @@ const App: React.FC = () => {
               {/* Image Side - FULL COLOR FIX */}
               <div className="w-full md:w-3/5 relative min-h-[300px] border-b md:border-b-0 md:border-r border-white/10">
                 <img 
-                  src={selectedProject.image} 
+                  src={selectedProject.image.startsWith('/') ? import.meta.env.BASE_URL + selectedProject.image.slice(1) : selectedProject.image} 
                   alt={selectedProject.title[language]} 
                   className="absolute inset-0 w-full h-full object-cover"
                 />
