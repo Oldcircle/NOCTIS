@@ -132,7 +132,7 @@ const PROJECTS: Project[] = [
     title: { en: 'Xiangqi', zh: 'Xiangqi' }, 
     category: { en: 'Game Engine', zh: 'Web 博弈引擎' }, 
     year: '2025', 
-    image: 'https://images.unsplash.com/photo-1581023719008-0129208a0d26?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/xiangqi.png',
     description: { 
       en: 'Modern React+TS Web App with high-performance local AI engine. No backend required—experience Grandmaster-level gameplay directly in your browser.',
       zh: '基于 React 和 TypeScript 构建的现代化中国象棋 Web 应用。内置高性能 JavaScript 本地博弈引擎，无需后端服务器，在浏览器中即可体验特级大师水准的对弈。'
@@ -439,9 +439,9 @@ const App: React.FC = () => {
                 </h3>
              </div>
 
-             {/* 2. Portrait / Identity */}
-             <div className="md:col-span-4 md:row-span-2 h-[300px] md:h-auto bg-black border border-white/10 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center transition-all duration-500"></div>
+            {/* 2. Portrait / Identity */}
+            <div className="md:col-span-4 md:row-span-2 h-[300px] md:h-auto bg-black border border-white/10 relative overflow-hidden group">
+               <div className="absolute inset-0 bg-[url('/images/me.jpg')] bg-cover bg-center transition-all duration-500"></div>
                 {/* No grayscale overlay */}
                 <div className="absolute inset-0 border border-white/10 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 bg-black px-3 py-1 border border-white/20">
